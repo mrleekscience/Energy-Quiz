@@ -1,0 +1,3095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr Leek Science — AQA GCSE Physics Topic 1: Energy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       MR LEEK SCIENCE — ROYAL / SAPPHIRE BLUE DESIGN TOKENS (PHYSICS TOPIC 1)
+       ========================================================================== */
+    :root {
+      --navy-950: #09152b;
+      --navy-900: #0f172a;
+      --blue-900: #1e3a8a;
+      --blue-800: #1e40af;
+      --blue-700: #1d4ed8;
+      --blue-600: #2563eb;
+      --blue-500: #3b82f6;
+      --blue-400: #60a5fa;
+
+      --blue-200: #bfdbfe;
+      --blue-100: #dbeafe;
+      --blue-50: #eff6ff;
+      --blue-tint: #f8fbff;
+
+      --bg-page: #f8fafc;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      --sky-100: #e0f2fe;
+      --sky-700: #0369a1;
+      --green-chip-bg: #dcfce7;
+      --green-chip-fg: #15803d;
+      --purple-100: #f3e8ff;
+      --purple-700: #7e22ce;
+
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+
+      --amber-700: #b45309;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+
+      --rose-700: #be123c;
+      --rose-600: #dc2626;
+      --rose-500: #ef4444;
+      --rose-200: #fecaca;
+      --rose-100: #fee2e2;
+      --rose-50: #fef2f2;
+
+      --shadow-shell: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-cta: 0 6px 18px -2px rgba(29, 78, 216, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--slate-900);
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ==========================================================================
+       CENTERED MAIN CARD CONTAINER (max-w-4xl equivalent ~ 920px)
+       ========================================================================== */
+    .app-container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-shell);
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       TOP ROYAL / SAPPHIRE BLUE BANNER HEADER
+       ========================================================================== */
+    .banner-header {
+      background: linear-gradient(135deg, #09152b 0%, #1e3a8a 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .banner-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-200);
+    }
+
+    .brand-tag {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .banner-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .banner-subtitle {
+      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 800px;
+      line-height: 1.52;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       WHITE FORM BODY
+       ========================================================================== */
+    .card-body {
+      padding: 28px 36px 36px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    /* Row 1: Student Name & Email Address */
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+
+    .field-label .req-star {
+      color: var(--blue-700);
+      margin-left: 2px;
+    }
+
+    .field-label .opt-muted {
+      color: var(--slate-400);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      background: #ffffff;
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .text-input::placeholder {
+      color: var(--slate-400);
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 3.5px rgba(59, 130, 246, 0.2);
+    }
+
+    .text-input.input-error {
+      border-color: var(--rose-500);
+      background-color: var(--rose-50);
+      box-shadow: 0 0 0 3.5px rgba(239, 68, 68, 0.16);
+      animation: shakeInput 0.34s ease;
+    }
+
+    .error-hint {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--rose-600);
+      margin-top: 5px;
+    }
+
+    @keyframes shakeInput {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .selected-tier-pill {
+      background: var(--blue-50);
+      border: 1px solid var(--blue-200);
+      color: var(--blue-700);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .avail-count-text {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+
+    /* Row 2: 3-Column Tier Selection Grid */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tier-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .tier-card.selected {
+      border-color: var(--blue-700);
+      background: var(--blue-50);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.11);
+    }
+
+    .tier-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .spec-chip {
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .chip-blue {
+      background: var(--sky-100);
+      color: var(--sky-700);
+    }
+
+    .chip-green {
+      background: var(--green-chip-bg);
+      color: var(--green-chip-fg);
+    }
+
+    .chip-purple {
+      background: var(--purple-100);
+      color: var(--purple-700);
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--slate-300);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-circle svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--slate-300);
+      stroke-width: 2.8;
+      fill: none;
+    }
+
+    .tier-card.selected .radio-circle {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+    }
+
+    .tier-card.selected .radio-circle svg {
+      stroke: #ffffff;
+    }
+
+    .tier-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-600);
+      line-height: 1.52;
+    }
+
+    /* Row 3: 2-Column Quiz Focus Grid */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .focus-card.selected {
+      border-color: var(--blue-700);
+      background: var(--blue-50);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.11);
+    }
+
+    .focus-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .focus-icon-blue {
+      background: var(--blue-700);
+      color: #ffffff;
+    }
+
+    .focus-icon-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+    }
+
+    .focus-card.selected .focus-icon-amber {
+      background: var(--blue-700);
+      color: #ffffff;
+    }
+
+    .focus-content {
+      flex: 1;
+    }
+
+    .focus-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .focus-check {
+      color: var(--blue-700);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .focus-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.48;
+    }
+
+    /* Row 4: Number of Questions 5-Column Grid */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .count-btn {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .count-btn:hover:not(.active) {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+    }
+
+    .count-btn.active {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.28);
+    }
+
+    .cap-notice {
+      margin-top: 9px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--amber-700);
+      background: var(--amber-50);
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 7px 12px;
+    }
+
+    /* Divider + Bottom Full-Width CTA */
+    .cta-divider {
+      border: none;
+      border-top: 1px solid var(--slate-200);
+      margin: 26px 0 22px;
+    }
+
+    .btn-start-cta {
+      width: 100%;
+      background: var(--blue-700);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-cta);
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-start-cta:hover {
+      background: var(--blue-800);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SCREEN 2: ACTIVE QUIZ INTERFACE
+       ========================================================================== */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hud-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hud-pill-brand {
+      background: var(--navy-950);
+      color: #ffffff;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .hud-pill-dark {
+      background: var(--blue-900);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-blue {
+      background: var(--blue-50);
+      color: var(--blue-700);
+      border: 1px solid var(--blue-200);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hud-score-badge {
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+      border: 1px solid #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .hud-q-counter {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+
+    .hud-change-btn {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .hud-change-btn:hover {
+      border-color: var(--blue-700);
+      color: var(--blue-700);
+      background: var(--blue-50);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--blue-800), var(--blue-500));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: var(--blue-50);
+      border: 1.5px solid var(--blue-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .q-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .q-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--blue-700);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .rp-badge {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      border: 1px solid #fcd34d;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    .kbd-tip {
+      font-size: 0.73rem;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+
+    .q-stem {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.52;
+    }
+
+    .q-formula-box {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--blue-200);
+      border-left: 4px solid var(--blue-700);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: "Plus Jakarta Sans", "Inter", monospace;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--blue-900);
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.84rem;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--blue-200);
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .data-table th {
+      background: var(--blue-50);
+      color: var(--blue-900);
+      font-weight: 700;
+    }
+
+    .data-table td {
+      background: #ffffff;
+      color: var(--slate-800);
+      font-weight: 600;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 18px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: all 0.15s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--blue-600);
+      background: var(--blue-50);
+    }
+
+    .opt-btn:disabled {
+      cursor: default;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      border-color: var(--emerald-600);
+      background: var(--emerald-50);
+      color: var(--slate-900);
+    }
+
+    .opt-btn.correct .opt-letter {
+      background: var(--emerald-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.incorrect {
+      border-color: var(--rose-600);
+      background: var(--rose-50);
+      color: var(--rose-700);
+    }
+
+    .opt-btn.incorrect .opt-letter {
+      background: var(--rose-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.dimmed {
+      opacity: 0.55;
+    }
+
+    .feedback-panel {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback-panel.fb-pass {
+      background: var(--emerald-50);
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--emerald-600);
+    }
+
+    .feedback-panel.fb-fail {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-left: 5px solid var(--rose-600);
+    }
+
+    .fb-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fb-status {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .fb-pass .fb-status { color: var(--emerald-700); }
+    .fb-fail .fb-status { color: var(--rose-600); }
+
+    .fb-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--slate-700);
+      border: 1px solid var(--slate-200);
+    }
+
+    .fb-text {
+      font-size: 0.91rem;
+      color: var(--slate-800);
+      line-height: 1.56;
+    }
+
+    .quiz-bottom-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .btn-primary-sm {
+      background: var(--blue-700);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+      transition: background 0.16s ease;
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--blue-800);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    .report-hero-box {
+      background: var(--blue-50);
+      border: 1.5px solid var(--blue-200);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-student-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--blue-700);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .report-score-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .report-pct {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      font-weight: 800;
+      color: var(--blue-700);
+      line-height: 1;
+    }
+
+    .report-fraction {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background: var(--blue-900);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .report-summary-msg {
+      font-size: 0.93rem;
+      color: var(--slate-700);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .report-btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mastery-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .mastery-section-head h3 {
+      font-size: 1.05rem;
+      color: var(--slate-900);
+    }
+
+    .legend-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+
+    .tag-g { background: var(--emerald-50); color: var(--emerald-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-a { background: var(--amber-50); color: var(--amber-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-r { background: var(--rose-50); color: var(--rose-600); padding: 3px 9px; border-radius: 999px; }
+
+    .mastery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mastery-item {
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #ffffff;
+    }
+
+    .mastery-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mastery-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--slate-900);
+    }
+
+    .mastery-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .sc-strong { background: var(--emerald-100); color: var(--emerald-700); }
+    .sc-dev { background: var(--amber-100); color: var(--amber-700); }
+    .sc-weak { background: var(--rose-100); color: var(--rose-600); }
+
+    .mastery-bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    .mastery-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-g { background: var(--emerald-600); }
+    .fill-a { background: var(--amber-600); }
+    .fill-r { background: var(--rose-600); }
+
+    .mastery-tip {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      border: 1.5px solid var(--slate-200);
+      border-left: 5px solid var(--slate-400);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .review-card.rc-ok { border-left-color: var(--emerald-600); }
+    .review-card.rc-bad { border-left-color: var(--rose-600); }
+
+    .rc-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--blue-700);
+      margin-bottom: 4px;
+    }
+
+    .rc-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .rc-ans {
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+    }
+
+    .rc-exp {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--slate-200);
+      font-size: 0.84rem;
+      color: var(--slate-700);
+      line-height: 1.52;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 820px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem 0.65rem 2rem;
+      }
+      .banner-header {
+        padding: 24px 20px;
+      }
+      .card-body {
+        padding: 20px 18px 26px;
+      }
+      .input-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .count-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .kbd-tip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ======================================================================
+         ROYAL / SAPPHIRE BLUE HEADER BANNER
+         ====================================================================== -->
+    <header class="banner-header">
+      <div class="banner-top-row">
+        <span class="spec-pill">TOPIC 1 &bull; PAPER 1 REVISION (8463 &amp; 8464)</span>
+        <span class="brand-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bfdbfe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          Mr Leek Science
+        </span>
+      </div>
+      <h1 id="banner-main-title" class="banner-title">Configure Your Energy Quiz</h1>
+      <p id="banner-main-sub" class="banner-subtitle">Enter your name, choose your tier, select either all Topic 1 content or Required Practicals &amp; Calculations only, and pick your question count.</p>
+    </header>
+
+    <!-- ======================================================================
+         VIEW 1: CONFIGURATION SCREEN
+         ====================================================================== -->
+    <main id="view-config" class="card-body">
+      <!-- Row 1: Student Name & Email Address -->
+      <div class="section-block input-grid">
+        <div class="field-group">
+          <label for="student-name" class="field-label">Student Name <span class="req-star">*</span></label>
+          <input type="text" id="student-name" class="text-input" placeholder="Enter your full name" autocomplete="name" />
+          <span id="name-error-msg" class="error-hint hidden">Please enter your name before starting the quiz.</span>
+        </div>
+
+        <div class="field-group">
+          <label for="student-email" class="field-label">Email Address <span class="opt-muted">(Optional)</span></label>
+          <input type="email" id="student-email" class="text-input" placeholder="e.g. student@school.co.uk" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Row 2: Select Tier / Pathway -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Select Tier / Pathway</span>
+          <span id="selected-tier-badge" class="selected-tier-pill">Higher Tier Selected</span>
+        </div>
+
+        <div class="tier-grid" role="radiogroup" aria-label="Select Tier or Pathway">
+          <!-- Foundation Tier -->
+          <div class="tier-card" id="tier-card-foundation" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('foundation')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('foundation')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-blue">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Foundation Tier</div>
+            <p class="tier-card-desc">Energy stores &amp; transfers, kinetic, gravitational potential &amp; elastic energy equations, specific heat capacity, power, efficiency &amp; energy resources (Grades 1–5).</p>
+          </div>
+
+          <!-- Higher Tier (Default Selected) -->
+          <div class="tier-card selected" id="tier-card-higher" role="radio" aria-checked="true" tabindex="0" onclick="selectTier('higher')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('higher')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-green">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Higher Tier</div>
+            <p class="tier-card-desc">Includes multi-step rearranged equations (v, h, e, c), efficiency calculations, work done, Sankey diagrams &amp; energy resource evaluations (Grades 4–9).</p>
+          </div>
+
+          <!-- Separate Physics -->
+          <div class="tier-card" id="tier-card-separate" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('separate')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('separate')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-purple">TRIPLE 8463</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Separate Physics</div>
+            <p class="tier-card-desc">Full 8463 content: Thermal insulation Required Practical 2 (comparing materials &amp; thicknesses), advanced multi-step energy transfers &amp; payback time (Grades 1–9).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Quiz Focus -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Quiz Focus</span>
+        </div>
+
+        <div class="focus-grid" role="radiogroup" aria-label="Quiz Focus">
+          <!-- Option 1: All Topics -->
+          <div class="focus-card selected" id="focus-card-all" role="radio" aria-checked="true" tabindex="0" onclick="selectFocus('all')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('all')">
+            <div class="focus-icon-box focus-icon-blue" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>All Energy Topics</span>
+                <span id="focus-check-all" class="focus-check">&#10003;</span>
+              </div>
+              <p class="focus-desc">Covers energy stores &amp; pathways, E<sub>k</sub>/E<sub>p</sub>/E<sub>e</sub> equations, specific heat capacity, power, work done, efficiency, thermal insulation &amp; national/global energy resources.</p>
+            </div>
+          </div>
+
+          <!-- Option 2: Required Practicals & Calculations Only -->
+          <div class="focus-card" id="focus-card-practicals" role="radio" aria-checked="false" tabindex="0" onclick="selectFocus('practicals')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('practicals')">
+            <div class="focus-icon-box focus-icon-amber" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6"></path>
+                <path d="M10 3v5.5L4.5 18A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3L14 8.5V3"></path>
+                <path d="M7 15h10"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>Required Practicals &amp; Calculations Only</span>
+                <span id="focus-check-practicals" class="focus-check hidden">&#10003;</span>
+              </div>
+              <p class="focus-desc">Focused drill: RP1/RP14 Specific Heat Capacity (joulemeter, heater, mass, &Delta;&theta;) &amp; RP2 (8463) Thermal Insulation, plus core Physics equations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Number of Questions -->
+      <div class="section-block" style="margin-bottom: 0;">
+        <div class="section-header-bar">
+          <span class="section-title">Number of Questions</span>
+          <span id="available-q-label" class="avail-count-text">64 unique questions available for Higher Tier</span>
+        </div>
+
+        <div class="count-grid" role="radiogroup" aria-label="Number of Questions">
+          <button type="button" class="count-btn" data-count="10" onclick="selectCount(10)">10</button>
+          <button type="button" class="count-btn active" data-count="20" onclick="selectCount(20)">20</button>
+          <button type="button" class="count-btn" data-count="30" onclick="selectCount(30)">30</button>
+          <button type="button" class="count-btn" data-count="50" onclick="selectCount(50)">50</button>
+          <button type="button" class="count-btn" data-count="80" onclick="selectCount(80)">80</button>
+        </div>
+
+        <div id="cap-feedback-banner" class="cap-notice hidden"></div>
+      </div>
+
+      <hr class="cta-divider" />
+
+      <button type="button" id="btn-start-quiz" class="btn-start-cta" onclick="launchConfiguredQuiz()">
+        Start Higher Tier Quiz (20 Questions) &rarr;
+      </button>
+    </main>
+
+    <!-- ======================================================================
+         VIEW 2: ACTIVE QUIZ RUNNER
+         ====================================================================== -->
+    <section id="view-quiz" class="card-body hidden" aria-live="polite">
+      <div class="quiz-hud">
+        <div class="hud-badges">
+          <span class="hud-pill-brand">Mr Leek Science</span>
+          <span id="hud-student-pill" class="hud-pill-dark">Student</span>
+          <span id="hud-tier-pill" class="hud-pill-blue">Higher Tier</span>
+          <span id="hud-focus-pill" class="hud-pill-blue">All Energy Topics</span>
+          <span id="hud-retry-pill" class="hud-pill-amber hidden">Retry Missed Mode</span>
+        </div>
+
+        <div class="hud-stats">
+          <span id="hud-live-score" class="hud-score-badge">Score: 0 / 0</span>
+          <span id="hud-counter" class="hud-q-counter">Question 1 of 20</span>
+          <button type="button" class="hud-change-btn" onclick="returnToConfig()">Change Settings</button>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quiz-progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-meta-row">
+          <span id="q-kicker-label" class="q-kicker">Question 1 &bull; Sub-topic</span>
+          <span class="kbd-tip">Shortcuts: 1–4 or A–D to answer &bull; Enter for Next</span>
+        </div>
+        <div id="q-stem-text" class="q-stem">Question stem</div>
+        <div id="q-formula-box" class="q-formula-box hidden"></div>
+      </div>
+
+      <div id="quiz-options-list" class="options-list"></div>
+
+      <div id="quiz-feedback-panel" class="feedback-panel hidden">
+        <div class="fb-top">
+          <span id="fb-status-text" class="fb-status"></span>
+          <span class="fb-chip">AQA Examiner Insight</span>
+        </div>
+        <div id="fb-insight-text" class="fb-text"></div>
+      </div>
+
+      <div class="quiz-bottom-actions">
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">&larr; Change Settings</button>
+        <button type="button" id="btn-next-question" class="btn-primary-sm hidden" onclick="advanceQuestion()">Next Question &rarr;</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 3: DIAGNOSTIC RESULTS DASHBOARD
+         ====================================================================== -->
+    <section id="view-report" class="card-body hidden">
+      <div class="report-hero-box">
+        <div id="rep-student-header" class="report-student-line">Diagnostic Report &bull; Student</div>
+        <div class="report-score-row">
+          <span id="rep-pct-val" class="report-pct">85%</span>
+          <span id="rep-frac-val" class="report-fraction">(17 / 20)</span>
+        </div>
+        <div id="rep-grade-pill" class="grade-pill">Estimated AQA Indicator: Grade 8–9</div>
+        <p id="rep-msg-text" class="report-summary-msg"></p>
+      </div>
+
+      <div class="report-btn-row">
+        <button type="button" id="btn-retry-missed" class="btn-primary-sm" onclick="startRetryMissed()">Retry Missed Questions (3)</button>
+        <button type="button" class="btn-secondary" onclick="launchConfiguredQuiz()">Retake Full Quiz</button>
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">Back to Configuration</button>
+      </div>
+
+      <div class="mastery-section-head">
+        <h3>Sub-Topic Mastery Breakdown</h3>
+        <div class="legend-row">
+          <span class="tag-g">Strong Area (&ge;80%)</span>
+          <span class="tag-a">Developing (50–79%)</span>
+          <span class="tag-r">Priority Revision (&lt;50%)</span>
+        </div>
+      </div>
+
+      <div id="rep-mastery-grid" class="mastery-grid"></div>
+
+      <div class="review-header">
+        <h3 style="font-size: 1.05rem; color: var(--slate-900);">Full Question-by-Question Review</h3>
+        <button type="button" id="btn-toggle-review" class="btn-secondary" onclick="toggleReviewSection()">Show Full Question-by-Question Review</button>
+      </div>
+
+      <div id="rep-review-list" class="review-list hidden"></div>
+    </section>
+  </div>
+
+  <p class="footer-note">&copy; Mr Leek Science &bull; AQA GCSE Physics (8463 &amp; 8464) Topic 1 Energy Interactive Assessment</p>
+
+  <script>
+    /* ==========================================================================
+       AQA GCSE PHYSICS TOPIC 1 QUESTION BANK (72 UNIQUE QUESTIONS)
+       Subtopics:
+       1. Energy Stores & Pathways (14 Qs)
+       2. Kinetic, Gravitational & Elastic Potential Energy (18 Qs, isPractical: true)
+       3. Specific Heat Capacity & Required Practical 1 (14 Qs, isPractical: true)
+       4. Power, Work Done & Efficiency (14 Qs, mixed isPractical: true for RP2 & calcs)
+       5. National & Global Energy Resources (12 Qs)
+       ========================================================================== */
+    const SUBTOPIC_GUIDANCE = {
+      "Energy Stores & Pathways": "Memorise the 8 AQA energy stores (kinetic, gravitational potential, elastic potential, thermal, chemical, nuclear, magnetic, electrostatic) and the 4 transfer pathways (mechanical work done by a force, electrical work done by moving charges, heating, and radiation such as light/sound). Remember: in a closed system, there is no net change to the total energy—energy can be transferred usefully, stored, or dissipated, but never created or destroyed.",
+      "Kinetic, Gravitational & Elastic Potential Energy": "Practise converting units BEFORE substituting into equations: grams &rarr; kg (&divide; 1000), cm &rarr; m (&divide; 100), km &rarr; m (&times; 1000), and kJ &rarr; J (&times; 1000). Master the three store equations: E<sub>k</sub> = &frac12;mv<sup>2</sup> (and v = &radic;(2E<sub>k</sub> / m)), E<sub>p</sub> = mgh, and E<sub>e</sub> = &frac12;ke<sup>2</sup> (and e = &radic;(2E<sub>e</sub> / k)). Remember doubling speed quadruples kinetic energy!",
+      "Specific Heat Capacity & Required Practical 1": "Use &Delta;E = mc&Delta;&theta; (energy in J, mass in kg, specific heat capacity c in J/kg&deg;C, temperature change &Delta;&theta; in &deg;C). For Required Practical 1 / RP14: use a joulemeter (or E = VIt with ammeter, voltmeter &amp; stopclock), insulate the metal block to reduce heat loss to surroundings, add a drop of water/oil in the thermometer hole for good thermal contact, and wait for the maximum temperature after switching off due to thermal lag.",
+      "Power, Work Done & Efficiency": "Know P = E / t and P = W / t (1 watt = 1 joule per second), W = Fs, and Efficiency = useful output energy transfer &divide; total input energy transfer (or useful power output &divide; total power input). Efficiency is always &le; 1 (or &le; 100%). Unwanted dissipation is reduced by lubrication (cuts friction) and thermal insulation (low thermal conductivity). For Triple 8463 Required Practical 2: keep starting water temperature, volume, and beaker material constant when testing insulator type or thickness.",
+      "National & Global Energy Resources": "Define renewable accurately: an energy resource that is being (or can be) replenished as it is used. Compare fossil fuels (coal, oil, gas), nuclear fuel, biofuel, wind, hydro-electric, geothermal, tidal, solar, and wave in terms of reliability (e.g. nuclear/fossil/tidal/hydro/geothermal are reliable; wind/solar depend on weather/daylight), start-up time (gas is fastest, nuclear is slowest), and environmental impacts (CO<sub>2</sub> &rarr; global warming, SO<sub>2</sub> &rarr; acid rain, habitat flooding, visual/noise impact)."
+    };
+
+    const QUESTION_POOL = [
+      // ========================================================================
+      // 1. ENERGY STORES & PATHWAYS (14 Questions)
+      // ========================================================================
+      {
+        id: "P1_Q01",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "Which list contains ONLY valid AQA GCSE Physics ENERGY STORES?",
+        formulaBox: "The 8 AQA Energy Stores",
+        options: [
+          "Kinetic, gravitational potential, elastic potential, thermal, chemical, nuclear, magnetic, and electrostatic",
+          "Light, sound, electrical current, heating, and mechanical force",
+          "Kinetic, solar, wind, tidal, and geothermal",
+          "Gravity, friction, voltage, and radiation"
+        ],
+        correct: 0,
+        explanation: "AQA specification lists exactly 8 energy stores: kinetic, gravitational potential, elastic potential, thermal, chemical, nuclear, magnetic, and electrostatic. Light, sound, and electricity are transfer pathways, NOT stores!"
+      },
+      {
+        id: "P1_Q02",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "What are the FOUR ENERGY TRANSFER PATHWAYS by which energy can move between stores?",
+        formulaBox: "Energy transfer mechanisms",
+        options: [
+          "Mechanical work (by a force), electrical work (by moving charges), heating (due to temperature difference), and radiation (such as light or sound waves)",
+          "Kinetic, thermal, chemical, and nuclear",
+          "Conduction, convection, evaporation, and condensation",
+          "Gravity, magnetism, friction, and mass"
+        ],
+        correct: 0,
+        explanation: "Energy is transferred between stores mechanically (force moving an object), electrically (charges moving through a potential difference), by heating, or by radiation."
+      },
+      {
+        id: "P1_Q03",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "A battery-powered electric fan is switched on and its blades spin faster. Which energy store decreases and which main energy store increases?",
+        formulaBox: "Battery &rarr; Electric motor &rarr; Spinning blades",
+        options: [
+          "The CHEMICAL energy store of the battery decreases, and the KINETIC energy store of the spinning blades increases (transferred electrically and mechanically)",
+          "The electrical energy store decreases, and the sound energy store increases",
+          "The gravitational potential energy store decreases, and the nuclear energy store increases",
+          "The elastic potential energy store decreases, and the magnetic energy store increases"
+        ],
+        correct: 0,
+        explanation: "Examiner Tip: Never write 'electrical energy store'—a battery holds a CHEMICAL energy store, and energy is transferred via an electrical pathway to the kinetic store of the blades."
+      },
+      {
+        id: "P1_Q04",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "A car travelling along a flat road brakes sharply and comes to a complete stop. Describe the main energy transfer that occurs during braking.",
+        formulaBox: "Brakes applied &rarr; Brake pads &amp; discs heat up",
+        options: [
+          "Energy is transferred mechanically (work done by friction) from the KINETIC energy store of the moving car to the THERMAL energy store of the brake pads, discs, and surrounding air",
+          "Energy is destroyed by friction until the car stops",
+          "Energy is transferred from the thermal store of the road into the chemical store of the petrol",
+          "Energy is transferred from the gravitational potential store to the elastic potential store"
+        ],
+        correct: 0,
+        explanation: "AQA standard scenario: Work done by the frictional force between the brakes and wheel reduces the kinetic energy of the vehicle and increases the temperature (thermal energy store) of the brakes."
+      },
+      {
+        id: "P1_Q05",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "What is meant by a CLOSED SYSTEM in physics, and what happens to the total energy inside a closed system?",
+        formulaBox: "Principle of Conservation of Energy",
+        options: [
+          "A system in which neither matter nor energy can enter or leave; there is NO NET CHANGE to the total energy in the system",
+          "A sealed glass jar that always stays at 0 &deg;C",
+          "A system where total energy steadily increases over time",
+          "A machine with 100% useful energy output and zero thermal dissipation"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: A closed system is an object or group of objects in which no energy transfers take place out of or into the energy stores of the system. There is no net change to the total energy."
+      },
+      {
+        id: "P1_Q06",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "An archer pulls back the string of a bow and then releases it, firing an arrow horizontally across a field. What are the energy store changes from pulling the bow to the arrow flying at full speed?",
+        formulaBox: "Archer's muscles &rarr; Bent bow &rarr; Flying arrow",
+        options: [
+          "Chemical store (muscles) &rarr; Elastic potential store (bent bow) &rarr; Kinetic store (moving arrow)",
+          "Gravitational potential store &rarr; Nuclear store &rarr; Magnetic store",
+          "Thermal store &rarr; Electrostatic store &rarr; Chemical store",
+          "Kinetic store &rarr; Chemical store &rarr; Elastic potential store"
+        ],
+        correct: 0,
+        explanation: "Stretching the bow stores elastic potential energy; releasing the string transfers that energy mechanically into the kinetic store of the arrow."
+      },
+      {
+        id: "P1_Q07",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "An electric kettle is plugged into the mains supply and used to boil cold water. Which energy transfer pathway heats the water, and which energy store increases?",
+        formulaBox: "Mains supply &rarr; Heating element &rarr; Water",
+        options: [
+          "Energy is transferred electrically to the heating element and then by HEATING to the THERMAL energy store of the water (and kettle/surroundings)",
+          "Energy is transferred mechanically to the chemical energy store of the water",
+          "Energy is transferred by radiation to the nuclear energy store of the water",
+          "Energy is transferred from the gravitational store of the water to its magnetic store"
+        ],
+        correct: 0,
+        explanation: "AQA standard scenario: Bringing water to a boil in an electric kettle transfers energy electrically/by heating into the thermal energy store of the water."
+      },
+      {
+        id: "P1_Q08",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "What does it mean when energy is 'DISSIPATED' during an energy transfer?",
+        formulaBox: "Unwanted energy transfers",
+        options: [
+          "Energy is spread out / transferred into less useful stores (usually warming the thermal energy store of the surroundings) where it is wasted",
+          "Energy is completely destroyed and disappears from the universe",
+          "Energy is converted into pure chemical fuel",
+          "Energy is concentrated into a single kinetic store"
+        ],
+        correct: 0,
+        explanation: "Dissipated energy is often called 'wasted energy' because it spreads out into the thermal store of the surroundings and cannot easily be recovered."
+      },
+      {
+        id: "P1_Q09",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "A ball is thrown vertically upwards into the air. Ignoring air resistance, describe the energy store changes as the ball rises from the thrower's hand to its highest point.",
+        formulaBox: "Ball moving upwards &rarr; Momentarily stationary at peak",
+        options: [
+          "Energy is transferred mechanically (against gravity) from the ball's KINETIC energy store to its GRAVITATIONAL POTENTIAL energy store",
+          "Energy is transferred from its gravitational potential store to its kinetic store",
+          "Energy is transferred from its thermal store to its elastic potential store",
+          "Its kinetic energy store increases while its gravitational potential energy store stays constant"
+        ],
+        correct: 0,
+        explanation: "AQA standard scenario: An object projected upwards transfers energy from its kinetic store to its gravitational potential store as it slows down and gains height."
+      },
+      {
+        id: "P1_Q10",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "A stone falls through the air towards the ground at a constant TERMINAL VELOCITY (air resistance equals weight). Which energy transfer is occurring while it falls at constant speed?",
+        formulaBox: "Constant speed &rArr; E<sub>k</sub> is constant!",
+        options: [
+          "Energy is transferred from the stone's GRAVITATIONAL POTENTIAL energy store to the THERMAL energy store of the stone and surrounding air (via work done against air resistance)",
+          "Energy is transferred from the gravitational potential store to the kinetic store",
+          "Energy is transferred from the kinetic store to the gravitational potential store",
+          "No energy transfers take place at terminal velocity"
+        ],
+        correct: 0,
+        explanation: "Higher Tier Trap: Because speed is constant at terminal velocity, kinetic energy (E<sub>k</sub> = &frac12;mv<sup>2</sup>) is NOT increasing! Instead, all lost E<sub>p</sub> is dissipated as thermal energy due to air resistance."
+      },
+      {
+        id: "P1_Q11",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "Which energy store is associated with the nuclei of uranium atoms inside a nuclear power station reactor?",
+        formulaBox: "Nuclear fission fuel rods",
+        options: [
+          "Nuclear energy store",
+          "Chemical energy store",
+          "Electrostatic energy store",
+          "Elastic potential energy store"
+        ],
+        correct: 0,
+        explanation: "Energy stored inside atomic nuclei (released during fission or fusion) is the nuclear energy store."
+      },
+      {
+        id: "P1_Q12",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "Two bar magnets are pushed together with their north poles facing each other and held stationary. Which energy store has increased?",
+        formulaBox: "Repelling magnetic poles forced closer",
+        options: [
+          "Magnetic energy store",
+          "Electrostatic energy store",
+          "Gravitational potential energy store",
+          "Nuclear energy store"
+        ],
+        correct: 0,
+        explanation: "Forcing repelling magnetic poles closer stores energy in the magnetic energy store."
+      },
+      {
+        id: "P1_Q13",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "A swinging pendulum bob is released from rest at point A, swings down through its lowest point B, and rises to point C (slightly lower than A because of air resistance). Why is point C lower than point A?",
+        formulaBox: "Pendulum in air (not a completely frictionless system)",
+        options: [
+          "Some energy is transferred mechanically against air resistance and pivot friction into the THERMAL energy store of the surroundings, leaving less energy in the bob's gravitational potential store at C",
+          "Gravity gets stronger on the right-hand side of the swing",
+          "Mass is lost from the pendulum bob during the swing",
+          "The pendulum bob gains nuclear energy"
+        ],
+        correct: 0,
+        explanation: "Total energy is conserved, but dissipated thermal energy reduces the mechanical energy (E<sub>p</sub> + E<sub>k</sub>) remaining in the bob."
+      },
+      {
+        id: "P1_Q14",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Energy Stores & Pathways",
+        stem: "A gas camping stove burns propane gas to heat a pan of soup. Which energy store decreases as the propane burns?",
+        formulaBox: "Propane + Oxygen &rarr; Carbon dioxide + Water",
+        options: [
+          "Chemical energy store (of the propane fuel and oxygen)",
+          "Thermal energy store (of the propane)",
+          "Elastic potential energy store",
+          "Electrostatic energy store"
+        ],
+        correct: 0,
+        explanation: "Fuels (coal, oil, gas, wood, food, batteries) hold energy in a chemical energy store."
+      },
+
+      // ========================================================================
+      // 2. KINETIC, GRAVITATIONAL & ELASTIC POTENTIAL ENERGY (18 Questions)
+      // ========================================================================
+      {
+        id: "P1_Q15",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A cyclist and bicycle have a combined mass of 80 kg and travel at a speed of 5.0 m/s. Calculate their kinetic energy.",
+        formulaBox: "E<sub>k</sub> = &frac12; m v<sup>2</sup>",
+        options: [
+          "1000 J (1.0 kJ)",
+          "200 J",
+          "400 J",
+          "2000 J"
+        ],
+        correct: 0,
+        explanation: "E<sub>k</sub> = 0.5 &times; 80 &times; 5.0<sup>2</sup> = 40 &times; 25 = 1000 J. (Common mistake: forgetting to square v gives 200 J!)"
+      },
+      {
+        id: "P1_Q16",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A tennis ball of mass 60 g is served at a speed of 40 m/s. Calculate its kinetic energy. (Remember to convert mass into kg first!)",
+        formulaBox: "E<sub>k</sub> = &frac12; m v<sup>2</sup>  |  1 kg = 1000 g",
+        options: [
+          "48 J",
+          "48,000 J",
+          "1.2 J",
+          "96 J"
+        ],
+        correct: 0,
+        explanation: "Convert mass: 60 g &divide; 1000 = 0.060 kg. Then E<sub>k</sub> = 0.5 &times; 0.060 &times; 40<sup>2</sup> = 0.030 &times; 1600 = 48 J."
+      },
+      {
+        id: "P1_Q17",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A sprinter of mass 70 kg has a kinetic energy of 3150 J. Calculate the sprinter's speed.",
+        formulaBox: "v = &radic;(2E<sub>k</sub> / m)",
+        options: [
+          "9.5 m/s",
+          "90 m/s",
+          "45 m/s",
+          "6.7 m/s"
+        ],
+        correct: 0,
+        explanation: "v<sup>2</sup> = (2 &times; 3150) &divide; 70 = 6300 &divide; 70 = 90. Taking the square root: v = &radic;90 = 9.486... &approx; 9.5 m/s."
+      },
+      {
+        id: "P1_Q18",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A car travelling at 10 m/s has a kinetic energy of 60 kJ. If the same car accelerates to 20 m/s (doubling its speed), what is its new kinetic energy?",
+        formulaBox: "E<sub>k</sub> &prop; v<sup>2</sup>",
+        options: [
+          "240 kJ (four times as much)",
+          "120 kJ (twice as much)",
+          "60 kJ (unchanged)",
+          "30 kJ (half as much)"
+        ],
+        correct: 0,
+        explanation: "Because kinetic energy is proportional to speed SQUARED (v<sup>2</sup>), doubling speed multiplies E<sub>k</sub> by 2<sup>2</sup> = 4: 60 kJ &times; 4 = 240 kJ."
+      },
+      {
+        id: "P1_Q19",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A crane lifts a steel girder of mass 450 kg vertically upwards by 12 m. Calculate the increase in gravitational potential energy. (g = 9.8 N/kg)",
+        formulaBox: "E<sub>p</sub> = m g h",
+        options: [
+          "52,920 J (52.9 kJ)",
+          "5400 J",
+          "37.5 J",
+          "529.2 J"
+        ],
+        correct: 0,
+        explanation: "E<sub>p</sub> = 450 &times; 9.8 &times; 12 = 52,920 J."
+      },
+      {
+        id: "P1_Q20",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A mountaineer of mass 75 kg gains 441 kJ of gravitational potential energy while climbing a ridge. Calculate the vertical height climbed. (g = 9.8 N/kg)",
+        formulaBox: "h = E<sub>p</sub> / (m g)  |  1 kJ = 1000 J",
+        options: [
+          "600 m",
+          "0.60 m",
+          "5880 m",
+          "45,000 m"
+        ],
+        correct: 0,
+        explanation: "Convert 441 kJ = 441,000 J. Then h = 441,000 &divide; (75 &times; 9.8) = 441,000 &divide; 735 = 600 m."
+      },
+      {
+        id: "P1_Q21",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A spring with a spring constant of 250 N/m is stretched by an extension of 0.12 m (within its limit of proportionality). Calculate the elastic potential energy stored in the spring.",
+        formulaBox: "E<sub>e</sub> = &frac12; k e<sup>2</sup>",
+        options: [
+          "1.8 J",
+          "3.6 J",
+          "15 J",
+          "30 J"
+        ],
+        correct: 0,
+        explanation: "E<sub>e</sub> = 0.5 &times; 250 &times; 0.12<sup>2</sup> = 125 &times; 0.0144 = 1.8 J."
+      },
+      {
+        id: "P1_Q22",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A suspension spring with spring constant k = 4000 N/m is compressed by 5.0 cm. Calculate the elastic potential energy stored. (Convert cm to m first!)",
+        formulaBox: "E<sub>e</sub> = &frac12; k e<sup>2</sup>  |  1 m = 100 cm",
+        options: [
+          "5.0 J",
+          "50,000 J",
+          "100 J",
+          "10 J"
+        ],
+        correct: 0,
+        explanation: "Convert extension: 5.0 cm &divide; 100 = 0.050 m. E<sub>e</sub> = 0.5 &times; 4000 &times; 0.050<sup>2</sup> = 2000 &times; 0.0025 = 5.0 J."
+      },
+      {
+        id: "P1_Q23",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A catapult band stores 2.45 J of elastic potential energy when stretched by 0.14 m. Calculate the spring constant k of the band.",
+        formulaBox: "k = 2E<sub>e</sub> / e<sup>2</sup>",
+        options: [
+          "250 N/m",
+          "125 N/m",
+          "35 N/m",
+          "17.5 N/m"
+        ],
+        correct: 0,
+        explanation: "k = (2 &times; 2.45) &divide; 0.14<sup>2</sup> = 4.90 &divide; 0.0196 = 250 N/m."
+      },
+      {
+        id: "P1_Q24",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A spring with a spring constant of 80 N/m stores 0.90 J of elastic potential energy. Calculate the extension of the spring in metres.",
+        formulaBox: "e = &radic;(2E<sub>e</sub> / k)",
+        options: [
+          "0.15 m",
+          "0.0225 m",
+          "0.106 m",
+          "0.30 m"
+        ],
+        correct: 0,
+        explanation: "e<sup>2</sup> = (2 &times; 0.90) &divide; 80 = 1.80 &divide; 80 = 0.0225. Taking the square root: e = &radic;0.0225 = 0.15 m."
+      },
+      {
+        id: "P1_Q25",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A rollercoaster car starts from rest at the top of a 20 m high drop. Assuming negligible friction and air resistance, calculate its speed at the bottom of the drop. (g = 9.8 N/kg)",
+        formulaBox: "&Delta;E<sub>p</sub> = &Delta;E<sub>k</sub>  &rArr;  mgh = &frac12;mv<sup>2</sup>  &rArr;  v = &radic;(2gh)",
+        options: [
+          "19.8 m/s (or 20 m/s to 2 s.f.)",
+          "392 m/s",
+          "14.0 m/s",
+          "9.8 m/s"
+        ],
+        correct: 0,
+        explanation: "Notice mass cancels out! mgh = &frac12;mv<sup>2</sup> &rArr; v = &radic;(2 &times; 9.8 &times; 20) = &radic;392 = 19.798... &approx; 19.8 m/s."
+      },
+      {
+        id: "P1_Q26",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A diver of mass 60 kg steps off a 10 m high diving board (g = 9.8 N/kg). If 480 J of energy is dissipated due to air resistance during the fall, how much kinetic energy does the diver have just before hitting the water?",
+        formulaBox: "E<sub>k, bottom</sub> = E<sub>p, top</sub> &minus; E<sub>dissipated</sub>",
+        options: [
+          "5400 J",
+          "5880 J",
+          "6360 J",
+          "120 J"
+        ],
+        correct: 0,
+        explanation: "Initial E<sub>p</sub> = 60 &times; 9.8 &times; 10 = 5880 J. Subtracting dissipated energy: 5880 &minus; 480 = 5400 J."
+      },
+      {
+        id: "P1_Q27",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "Which two factors determine the amount of KINETIC ENERGY stored in a moving object?",
+        formulaBox: "E<sub>k</sub> = &frac12; m v<sup>2</sup>",
+        options: [
+          "The mass of the object and its speed",
+          "The weight of the object and its height above the ground",
+          "The spring constant and extension",
+          "The temperature and specific heat capacity"
+        ],
+        correct: 0,
+        explanation: "Kinetic energy depends only on mass (m) and speed (v)."
+      },
+      {
+        id: "P1_Q28",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A suitcase of mass 22 kg is lifted onto a luggage rack 1.8 m above the floor. Taking g = 9.8 N/kg, calculate the gain in gravitational potential energy.",
+        formulaBox: "E<sub>p</sub> = m g h",
+        options: [
+          "388.08 J",
+          "39.6 J",
+          "119.8 J",
+          "215.6 J"
+        ],
+        correct: 0,
+        explanation: "E<sub>p</sub> = 22 &times; 9.8 &times; 1.8 = 388.08 J."
+      },
+      {
+        id: "P1_Q29",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "An object of unknown mass is moving at 6.0 m/s and has a kinetic energy of 450 J. Calculate the mass of the object.",
+        formulaBox: "m = 2E<sub>k</sub> / v<sup>2</sup>",
+        options: [
+          "25 kg",
+          "12.5 kg",
+          "150 kg",
+          "75 kg"
+        ],
+        correct: 0,
+        explanation: "m = (2 &times; 450) &divide; 6.0<sup>2</sup> = 900 &divide; 36 = 25 kg."
+      },
+      {
+        id: "P1_Q30",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A toy dart of mass 0.020 kg is fired vertically upwards by a spring of spring constant 100 N/m compressed by 0.080 m. Assuming 100% energy transfer from elastic to gravitational potential energy, calculate the maximum height reached. (g = 9.8 N/kg)",
+        formulaBox: "&frac12; k e<sup>2</sup> = m g h",
+        options: [
+          "1.63 m",
+          "3.27 m",
+          "0.32 m",
+          "16.3 m"
+        ],
+        correct: 0,
+        explanation: "E<sub>e</sub> = 0.5 &times; 100 &times; 0.080<sup>2</sup> = 0.32 J. Setting mgh = 0.32 J: h = 0.32 &divide; (0.020 &times; 9.8) = 0.32 &divide; 0.196 = 1.63 m."
+      },
+      {
+        id: "P1_Q31",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "Which condition MUST be met for the elastic potential energy equation E<sub>e</sub> = &frac12;ke<sup>2</sup> to apply accurately to a stretched spring?",
+        formulaBox: "Hooke's Law validity",
+        options: [
+          "The spring must not be stretched beyond its limit of proportionality",
+          "The spring must be heated to 100 &deg;C",
+          "The spring must be made of pure copper",
+          "The extension must be greater than 10 metres"
+        ],
+        correct: 0,
+        explanation: "AQA specification: E<sub>e</sub> = &frac12;ke<sup>2</sup> applies assuming the limit of proportionality has not been exceeded."
+      },
+      {
+        id: "P1_Q32",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Kinetic, Gravitational & Elastic Potential Energy",
+        stem: "A car of mass 1200 kg travels at 72 km/h. Convert its speed into m/s and calculate its kinetic energy.",
+        formulaBox: "72 km/h = 72,000 m / 3600 s",
+        options: [
+          "20 m/s; E<sub>k</sub> = 240,000 J (240 kJ)",
+          "72 m/s; E<sub>k</sub> = 3,110,400 J",
+          "20 m/s; E<sub>k</sub> = 12,000 J",
+          "2.0 m/s; E<sub>k</sub> = 2400 J"
+        ],
+        correct: 0,
+        explanation: "72,000 m &divide; 3600 s = 20 m/s. Then E<sub>k</sub> = 0.5 &times; 1200 &times; 20<sup>2</sup> = 600 &times; 400 = 240,000 J."
+      },
+
+      // ========================================================================
+      // 3. SPECIFIC HEAT CAPACITY & REQUIRED PRACTICAL 1 (14 Questions)
+      // ========================================================================
+      {
+        id: "P1_Q33",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "What is the exact AQA definition of the SPECIFIC HEAT CAPACITY (c) of a substance?",
+        formulaBox: "&Delta;E = m c &Delta;&theta;",
+        options: [
+          "The amount of energy required to raise the temperature of 1 kilogram of the substance by 1 degree Celsius (1 &deg;C)",
+          "The total thermal energy stored inside an object at room temperature",
+          "The amount of energy needed to melt 1 kg of a solid at its melting point",
+          "The temperature rise when 1 joule of energy is supplied to any object"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact definition: The specific heat capacity of a substance is the amount of energy required to raise the temperature of one kilogram of the substance by one degree Celsius."
+      },
+      {
+        id: "P1_Q34",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "What is the standard SI unit for SPECIFIC HEAT CAPACITY (c)?",
+        formulaBox: "c = &Delta;E / (m &Delta;&theta;)",
+        options: [
+          "J / kg &deg;C (joules per kilogram degree Celsius)",
+          "J / kg",
+          "W / &deg;C",
+          "kg &deg;C / J"
+        ],
+        correct: 0,
+        explanation: "Energy in J divided by mass in kg and temperature change in &deg;C gives J/kg &deg;C."
+      },
+      {
+        id: "P1_Q35",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "An electric kettle heats 1.5 kg of water from 20 &deg;C to 100 &deg;C. The specific heat capacity of water is 4200 J/kg &deg;C. Calculate the thermal energy transferred to the water.",
+        formulaBox: "&Delta;E = m c &Delta;&theta;",
+        options: [
+          "504,000 J (504 kJ)",
+          "630,000 J",
+          "126,000 J",
+          "336,000 J"
+        ],
+        correct: 0,
+        explanation: "Temperature rise &Delta;&theta; = 100 &minus; 20 = 80 &deg;C. &Delta;E = 1.5 &times; 4200 &times; 80 = 504,000 J."
+      },
+      {
+        id: "P1_Q36",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "In Required Practical 1 (RP1 / RP14), a 1.0 kg aluminium block is heated by an immersion heater. A joulemeter records 18,400 J supplied, and the block's temperature rises from 19.0 &deg;C to 39.0 &deg;C. Calculate the experimental specific heat capacity of aluminium.",
+        formulaBox: "c = &Delta;E / (m &Delta;&theta;)",
+        options: [
+          "920 J/kg &deg;C",
+          "472 J/kg &deg;C",
+          "968 J/kg &deg;C",
+          "368,000 J/kg &deg;C"
+        ],
+        correct: 0,
+        explanation: "&Delta;&theta; = 39.0 &minus; 19.0 = 20.0 &deg;C. c = 18,400 &divide; (1.0 &times; 20.0) = 920 J/kg &deg;C."
+      },
+      {
+        id: "P1_Q37",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "In Required Practical 1 (determining specific heat capacity of a metal block), why is the metal block wrapped in an INSULATING JACKET?",
+        formulaBox: "Reducing systematic experimental error",
+        options: [
+          "To reduce thermal energy dissipated (lost) to the surroundings so that almost all the measured electrical energy goes into raising the block's temperature",
+          "To make the metal block conduct electricity faster",
+          "To cool the thermometer down during the experiment",
+          "To increase the mass of the metal block"
+        ],
+        correct: 0,
+        explanation: "Without insulation, heat escapes to the air, making &Delta;&theta; smaller than it should be and causing the calculated specific heat capacity (c = &Delta;E / m&Delta;&theta;) to be artificially TOO HIGH."
+      },
+      {
+        id: "P1_Q38",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "In Required Practical 1, a student's calculated value for the specific heat capacity of copper is 445 J/kg &deg;C, whereas the true textbook value is 385 J/kg &deg;C. What is the main reason the experimental value is HIGHER than the true value?",
+        formulaBox: "c = &Delta;E<sub>supplied</sub> / (m &Delta;&theta;)",
+        options: [
+          "Some thermal energy supplied by the heater was dissipated to the surroundings (and used to heat the heater/thermometer), so more energy had to be supplied per 1 &deg;C rise of the block",
+          "The thermometer was read at eye level",
+          "The block gained thermal energy from the cold room",
+          "Copper has a lower density than aluminium"
+        ],
+        correct: 0,
+        explanation: "Classic 2-mark Required Practical 1 evaluation question: Heat loss to surroundings means &Delta;E<sub>supplied</sub> &gt; &Delta;E<sub>absorbed by block</sub>, giving a higher calculated value for c."
+      },
+      {
+        id: "P1_Q39",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "In Required Practical 1, why is a few drops of water or oil placed inside the thermometer hole in the metal block before inserting the thermometer?",
+        formulaBox: "Improving heat transfer to the thermometer bulb",
+        options: [
+          "To displace air gaps and ensure good thermal contact between the metal block and the thermometer bulb",
+          "To lubricate the thermometer so it slides out easily",
+          "To prevent the metal block from rusting",
+          "To lower the melting point of the block"
+        ],
+        correct: 0,
+        explanation: "Air is a poor thermal conductor; a drop of oil or water provides good thermal contact so the thermometer accurately tracks the block's temperature."
+      },
+      {
+        id: "P1_Q40",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "In Required Practical 1, if you do NOT have a joulemeter, which THREE measuring instruments must you use to calculate the electrical energy supplied to the 12 V immersion heater?",
+        formulaBox: "E = P t = V I t",
+        options: [
+          "A voltmeter (in parallel), an ammeter (in series), and a stopclock/stopwatch",
+          "A newtonmeter, a ruler, and a measuring cylinder",
+          "A top-pan balance, a protractor, and universal indicator",
+          "A barometer, a compass, and a thermometer"
+        ],
+        correct: 0,
+        explanation: "Multiplying potential difference (V), current (I), and time in seconds (t) gives the electrical energy transferred in joules (E = VIt)."
+      },
+      {
+        id: "P1_Q41",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "During Required Practical 1, after the immersion heater is switched off at 10 minutes, the thermometer reading continues to rise for another 30–60 seconds before peaking. Why should you record this MAXIMUM temperature?",
+        formulaBox: "Thermal inertia / Conduction lag",
+        options: [
+          "Because it takes time for thermal energy to conduct from the hot heater element through the metal block to the thermometer bulb",
+          "Because the room suddenly gets hotter when the power supply is switched off",
+          "Because the thermometer is broken",
+          "Because the block is undergoing a change of state"
+        ],
+        correct: 0,
+        explanation: "Allowing time for thermal energy inside the heater to distribute throughout the block gives the true final temperature reached."
+      },
+      {
+        id: "P1_Q42",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "Water has a very high specific heat capacity (4200 J/kg &deg;C) compared with iron (450 J/kg &deg;C). Why does this make water ideal for use in domestic central heating radiators and car engine cooling systems?",
+        formulaBox: "High c = Large energy stored/carried per 1 &deg;C temperature change",
+        options: [
+          "Water can absorb or release a very large amount of thermal energy for only a small change in temperature",
+          "Water heats up and cools down almost instantaneously with tiny amounts of energy",
+          "Water freezes at 100 &deg;C",
+          "Water is a better electrical conductor than copper"
+        ],
+        correct: 0,
+        explanation: "A high specific heat capacity means each kilogram of hot water carries a large store of thermal energy around radiators without needing dangerously high temperatures."
+      },
+      {
+        id: "P1_Q43",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "A copper pan of mass 0.80 kg (c = 385 J/kg &deg;C) absorbs 46,200 J of thermal energy from a gas hob. If its initial temperature was 22 &deg;C, what is its final temperature?",
+        formulaBox: "&Delta;&theta; = &Delta;E / (m c)",
+        options: [
+          "172 &deg;C",
+          "150 &deg;C",
+          "128 &deg;C",
+          "60 &deg;C"
+        ],
+        correct: 0,
+        explanation: "First find &Delta;&theta; = 46,200 &divide; (0.80 &times; 385) = 46,200 &divide; 308 = 150 &deg;C. Then final temperature = 22 + 150 = 172 &deg;C!"
+      },
+      {
+        id: "P1_Q44",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "A 50 W immersion heater is placed in an insulated beaker containing 0.25 kg of oil (c = 2000 J/kg &deg;C) for 4.0 minutes. Assuming no heat loss, calculate the temperature rise of the oil.",
+        formulaBox: "E = P t  and  &Delta;&theta; = E / (m c)",
+        options: [
+          "24 &deg;C",
+          "0.40 &deg;C",
+          "48 &deg;C",
+          "6.0 &deg;C"
+        ],
+        correct: 0,
+        explanation: "Convert time: 4.0 min = 240 s. Energy E = 50 &times; 240 = 12,000 J. &Delta;&theta; = 12,000 &divide; (0.25 &times; 2000) = 12,000 &divide; 500 = 24 &deg;C."
+      },
+      {
+        id: "P1_Q45",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "Four 1.0 kg metal blocks (Lead, Copper, Iron, Aluminium) are all at 20 &deg;C and each is supplied with exactly 10,000 J of thermal energy. Look at the table below—which metal reaches the HIGHEST final temperature?",
+        formulaBox: "<table class='data-table'><tr><th>Metal</th><th>Lead</th><th>Copper</th><th>Iron</th><th>Aluminium</th></tr><tr><td><strong>c (J/kg &deg;C)</strong></td><td>130</td><td>385</td><td>450</td><td>900</td></tr></table>",
+        options: [
+          "Lead (lowest specific heat capacity = largest temperature rise)",
+          "Aluminium (highest specific heat capacity)",
+          "Iron",
+          "All four reach the exact same temperature"
+        ],
+        correct: 0,
+        explanation: "Since &Delta;&theta; = &Delta;E / (mc), for the same energy and mass, the substance with the SMALLEST specific heat capacity (lead, 130 J/kg &deg;C) experiences the biggest temperature rise (+76.9 &deg;C)."
+      },
+      {
+        id: "P1_Q46",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Specific Heat Capacity & Required Practical 1",
+        stem: "In Required Practical 1, a student plots a graph of Temperature (&deg;C) on the y-axis against Energy Supplied (J) on the x-axis, obtaining a straight line after the first minute. How can the specific heat capacity (c) be found from the gradient of the straight-line section?",
+        formulaBox: "&Delta;&theta; = (1 / mc) &Delta;E  &rArr;  Gradient = &Delta;&theta; / &Delta;E = 1 / (mc)",
+        options: [
+          "c = 1 &divide; (gradient &times; mass)",
+          "c = gradient &times; mass",
+          "c = gradient &divide; mass",
+          "c = y-intercept &times; mass"
+        ],
+        correct: 0,
+        explanation: "Since gradient = &Delta;&theta; / &Delta;E = 1 / (mc), rearranging gives c = 1 / (gradient &times; m)."
+      },
+
+      // ========================================================================
+      // 4. POWER, WORK DONE & EFFICIENCY (14 Questions — includes RP2 8463)
+      // ========================================================================
+      {
+        id: "P1_Q47",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "What is the exact AQA definition of POWER, and what is 1 watt (1 W) equivalent to?",
+        formulaBox: "P = E / t  and  P = W / t",
+        options: [
+          "Power is the rate at which energy is transferred or the rate at which work is done; 1 watt = 1 joule of energy transferred per second (1 J/s)",
+          "Power is the total amount of force applied to an object; 1 watt = 1 newton per metre",
+          "Power is the percentage of input energy transferred usefully; 1 watt = 100%",
+          "Power is the energy required to heat 1 kg by 1 &deg;C"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: Power is defined as the rate at which energy is transferred or the rate at which work is done. An energy transfer of 1 joule per second is equal to a power of 1 watt."
+      },
+      {
+        id: "P1_Q48",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "Two electric motors (Motor X and Motor Y) both lift identical 50 kg crates through a vertical height of 10 m. Motor X takes 4.0 seconds, whereas Motor Y takes 12.0 seconds. Which statement is correct?",
+        formulaBox: "Comparing two motors lifting the same load",
+        options: [
+          "Both motors do the exact same amount of work / transfer the same gravitational potential energy, but Motor X has THREE TIMES the power of Motor Y",
+          "Motor X does three times as much work as Motor Y",
+          "Motor Y has three times the power of Motor X",
+          "Both motors have the exact same power"
+        ],
+        correct: 0,
+        explanation: "AQA specification example: Illustrate the definition of power by comparing two electric motors that both lift the same weight through the same height but one does it faster than the other."
+      },
+      {
+        id: "P1_Q49",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "A microwave oven has a power rating of 850 W and is switched on for 2.0 minutes. Calculate the total energy transferred by the microwave.",
+        formulaBox: "E = P t  |  1 minute = 60 seconds",
+        options: [
+          "102,000 J (102 kJ)",
+          "1700 J",
+          "425 J",
+          "7.08 J"
+        ],
+        correct: 0,
+        explanation: "Convert time to seconds: 2.0 min &times; 60 = 120 s. E = 850 &times; 120 = 102,000 J."
+      },
+      {
+        id: "P1_Q50",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "A forklift truck exerts a constant upward force of 3200 N to lift a pallet vertically by 2.5 m in 4.0 seconds. Calculate the useful power output of the forklift.",
+        formulaBox: "W = F s  and  P = W / t",
+        options: [
+          "2000 W (2.0 kW)",
+          "8000 W",
+          "32,000 W",
+          "320 W"
+        ],
+        correct: 0,
+        explanation: "Work done W = F &times; s = 3200 &times; 2.5 = 8000 J. Power P = W &divide; t = 8000 &divide; 4.0 = 2000 W."
+      },
+      {
+        id: "P1_Q51",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "An LED lamp is supplied with 40 J of electrical energy and transfers 34 J usefully as light (with 6 J dissipated as thermal energy). Calculate the efficiency of the LED lamp as BOTH a decimal and a percentage.",
+        formulaBox: "Efficiency = useful output energy transfer / total input energy transfer",
+        options: [
+          "0.85 (or 85%)",
+          "0.15 (or 15%)",
+          "1.18 (or 118%)",
+          "0.80 (or 80%)"
+        ],
+        correct: 0,
+        explanation: "Efficiency = 34 &divide; 40 = 0.85 (multiply by 100 = 85%). Efficiency can NEVER exceed 1.0 (100%)."
+      },
+      {
+        id: "P1_Q52",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "An electric crane motor has a total input power of 15 kW and operates at an efficiency of 0.72 (72%). Calculate the useful power output of the crane.",
+        formulaBox: "Useful power output = Efficiency &times; Total power input",
+        options: [
+          "10.8 kW (10,800 W)",
+          "20.8 kW",
+          "4.2 kW",
+          "1080 kW"
+        ],
+        correct: 0,
+        explanation: "Useful power output = 0.72 &times; 15 kW = 10.8 kW."
+      },
+      {
+        id: "P1_Q53",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "In a Sankey diagram representing an energy transfer in a petrol car engine, what does the WIDTH of each arrow represent?",
+        formulaBox: "Sankey diagram conventions",
+        options: [
+          "The amount (or percentage) of energy transferred — the sum of the widths of the output arrows equals the width of the input arrow",
+          "The physical length of the car",
+          "The temperature of the exhaust pipe",
+          "The speed of the car in metres per second"
+        ],
+        correct: 0,
+        explanation: "In a Sankey diagram, arrow widths are drawn to scale to represent energy (or power) values, visually demonstrating conservation of energy."
+      },
+      {
+        id: "P1_Q54",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "How do LUBRICATION and THERMAL INSULATION reduce unwanted energy transfers in machines and buildings?",
+        formulaBox: "Minimising energy dissipation",
+        options: [
+          "Lubrication reduces friction between moving parts (cutting unwanted thermal dissipation); thermal insulation has low thermal conductivity so it slows down the rate of energy transfer by conduction",
+          "Lubrication increases friction to generate extra heat; thermal insulation has very high thermal conductivity",
+          "Both lubrication and insulation destroy thermal energy",
+          "Thermal insulation works by increasing convection currents in cavity walls"
+        ],
+        correct: 0,
+        explanation: "AQA specification: Unwanted energy transfers can be reduced in a number of ways, for example through lubrication and the use of thermal insulation."
+      },
+      {
+        id: "P1_Q55",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "How does the THERMAL CONDUCTIVITY of a building's walls and the THICKNESS of those walls affect the rate of cooling of a heated house?",
+        formulaBox: "Rate of thermal energy transfer across walls",
+        options: [
+          "The LOWER the thermal conductivity of the wall material and the THICKER the walls, the slower the rate of cooling of the building",
+          "The HIGHER the thermal conductivity and the THINNER the walls, the slower the rate of cooling",
+          "Wall thickness has no effect on heat loss",
+          "Higher thermal conductivity traps more heat inside the house"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: The higher the thermal conductivity of a material the higher the rate of energy transfer by conduction across the material. Building walls with low thermal conductivity and greater thickness cool more slowly."
+      },
+      {
+        id: "P1_Q56",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "A household installs cavity wall insulation costing &pound;1200, which saves &pound;240 per year on heating bills. Calculate the PAYBACK TIME for the insulation.",
+        formulaBox: "Payback time = Installation cost / Annual savings",
+        options: [
+          "5.0 years",
+          "0.20 years",
+          "288 years",
+          "12 years"
+        ],
+        correct: 0,
+        explanation: "Payback time = &pound;1200 &divide; &pound;240/year = 5.0 years. After 5 years, the savings exceed the initial installation cost."
+      },
+      {
+        id: "P1_Q57",
+        tiers: ["separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "In Separate Physics (8463) Required Practical 2 (Investigating Thermal Insulation), a student wraps identical beakers of hot water in different insulating materials (bubble wrap, cotton wool, newspaper, foil) and measures temperature every 3 minutes. Which variables MUST be kept as CONTROL VARIABLES?",
+        formulaBox: "8463 Required Practical 2 — Fair Test Design",
+        options: [
+          "Volume of hot water, starting temperature of water, thickness (number of layers) of insulation, use of a lid, and room temperature",
+          "Only the type of insulating material",
+          "Only the stopwatch brand",
+          "Different volumes of water must be used for each material"
+        ],
+        correct: 0,
+        explanation: "To fairly compare thermal conductivities of different materials in RP2, keep water volume, starting temperature, insulation thickness, lid presence, and ambient room temperature constant."
+      },
+      {
+        id: "P1_Q58",
+        tiers: ["separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "In Separate Physics (8463) Required Practical 2, a student investigates how the THICKNESS of newspaper insulation affects heat loss by wrapping 1, 2, 4, and 6 layers around identical beakers of hot water at 80 &deg;C. Look at the results below—what valid conclusion can be drawn?",
+        formulaBox: "<table class='data-table'><tr><th>Layers of newspaper</th><th>0 (control)</th><th>1</th><th>2</th><th>4</th><th>6</th></tr><tr><td><strong>Temp after 15 min (&deg;C)</strong></td><td>51</td><td>58</td><td>63</td><td>69</td><td>72</td></tr></table>",
+        options: [
+          "Increasing the thickness (number of layers) of insulation reduces the rate of cooling (smaller temperature drop), with diminishing additional benefit as thickness increases further",
+          "Adding more layers of insulation increases the rate of cooling",
+          "Zero layers keeps the water hottest",
+          "Temperature drop is directly proportional to the number of layers"
+        ],
+        correct: 0,
+        explanation: "More layers increase total thermal resistance, reducing temperature drop from 29 &deg;C (0 layers) down to 8 &deg;C (6 layers)."
+      },
+      {
+        id: "P1_Q59",
+        tiers: ["separate"],
+        isPractical: true,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "In Separate Physics (8463) Required Practical 2, why is it essential to place a cardboard LID with a small hole for the thermometer over every beaker of hot water?",
+        formulaBox: "Controlling heat loss pathways",
+        options: [
+          "To prevent significant heat loss from the water surface by EVAPORATION and CONVECTION to the air above, ensuring the experiment measures conduction through the side insulation",
+          "To stop the thermometer from reading above 100 &deg;C",
+          "To increase the thermal conductivity of the water",
+          "To keep light out of the beaker"
+        ],
+        correct: 0,
+        explanation: "Without a lid, rapid evaporation and convection from the open top surface dominate cooling and mask differences between side insulators."
+      },
+      {
+        id: "P1_Q60",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Power, Work Done & Efficiency",
+        stem: "How can the efficiency of a mechanical system (such as a bicycle chain or electric winch) be increased?",
+        formulaBox: "Higher Tier — Increasing efficiency",
+        options: [
+          "By reducing wasted energy transfers—for example, lubricating moving bearings/chains to reduce friction, or streamlining shapes to reduce air resistance",
+          "By increasing the total input power so more energy is wasted",
+          "By painting the machine black",
+          "By making the moving parts rougher to increase friction"
+        ],
+        correct: 0,
+        explanation: "AQA Higher Tier requirement: Explain ways of increasing the efficiency of an intended energy transfer by minimising unwanted dissipation."
+      },
+
+      // ========================================================================
+      // 5. NATIONAL & GLOBAL ENERGY RESOURCES (12 Questions)
+      // ========================================================================
+      {
+        id: "P1_Q61",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "What is the exact AQA definition of a RENEWABLE energy resource?",
+        formulaBox: "Renewable vs. Non-renewable energy resources",
+        options: [
+          "An energy resource that is being (or can be) replenished as it is used",
+          "An energy resource that can be used twice before throwing away",
+          "An energy resource that never costs any money to build",
+          "Any fuel that is dug out of the ground, such as coal or uranium"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact definition: A renewable energy resource is one that is being (or can be) replenished as it is used."
+      },
+      {
+        id: "P1_Q62",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "Which list contains ONLY NON-RENEWABLE energy resources?",
+        formulaBox: "Finite energy resources",
+        options: [
+          "Coal, oil, natural gas (fossil fuels), and nuclear fuel (uranium/plutonium)",
+          "Biofuel, wind, hydro-electric, and geothermal",
+          "Tidal, solar, wave, and biofuel",
+          "Natural gas, wind, solar, and nuclear fuel"
+        ],
+        correct: 0,
+        explanation: "The four non-renewable energy resources on the AQA specification are the three fossil fuels (coal, oil, gas) plus nuclear fuel."
+      },
+      {
+        id: "P1_Q63",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "Which list contains ALL SEVEN RENEWABLE energy resources named in the AQA GCSE Physics specification?",
+        formulaBox: "AQA 7 renewable resources",
+        options: [
+          "Biofuel, wind, hydro-electric, geothermal, the tides, the Sun (solar), and water waves",
+          "Coal, oil, gas, nuclear, wind, solar, and tidal",
+          "Biofuel, uranium, hydrogen, wind, wave, solar, and coal",
+          "Geothermal, nuclear, hydro-electric, oil, gas, wind, and solar"
+        ],
+        correct: 0,
+        explanation: "AQA specification lists: biofuel, wind, hydro-electric, geothermal, the tides, the Sun, and water waves."
+      },
+      {
+        id: "P1_Q64",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "What are the THREE main uses of energy resources in society named in the AQA specification?",
+        formulaBox: "Global &amp; national energy demand sectors",
+        options: [
+          "Transport, electricity generation, and heating",
+          "Mining, fishing, and space travel",
+          "Photosynthesis, respiration, and digestion",
+          "Electrolysis, distillation, and chromatography"
+        ],
+        correct: 0,
+        explanation: "AQA specification: The main uses of energy resources are transport, electricity generation, and heating."
+      },
+      {
+        id: "P1_Q65",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "Which energy resources are RELIABLE for generating electricity on demand (not dependent on daily weather conditions), and which TWO renewable resources are UNRELIABLE due to weather?",
+        formulaBox: "Reliability &amp; National Grid baseload",
+        options: [
+          "Reliable: fossil fuels, nuclear, hydro-electric, geothermal, biofuel, and tidal (predictable); Unreliable: wind and solar (depend on wind speed and sunlight/cloud cover)",
+          "Reliable: wind and solar; Unreliable: nuclear and gas-fired power stations",
+          "All renewable resources are 100% reliable at every minute of the day",
+          "Fossil fuels only work when the wind is blowing"
+        ],
+        correct: 0,
+        explanation: "Wind and solar are intermittent/unreliable because weather changes; tidal is predictable (twice daily), while nuclear, fossil fuels, geothermal, biofuel, and hydro-electric provide reliable power."
+      },
+      {
+        id: "P1_Q66",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "When a sudden surge in electricity demand occurs on the UK National Grid (for example, during a major TV broadcast break), which type of power station has the SHORTEST START-UP TIME to respond rapidly?",
+        formulaBox: "Start-up times: Gas vs. Coal vs. Nuclear",
+        options: [
+          "Gas-fired power stations (and pumped-storage hydro-electric), whereas nuclear power stations have the slowest start-up time and run continuously as baseload",
+          "Nuclear power stations (start up in 5 seconds)",
+          "Coal-fired power stations (faster than gas)",
+          "Solar panels at midnight"
+        ],
+        correct: 0,
+        explanation: "Gas-fired turbines and pumped hydro respond within minutes; nuclear reactors take days to start up or shut down safely."
+      },
+      {
+        id: "P1_Q67",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "Compare the environmental impacts of BURNING FOSSIL FUELS versus NUCLEAR POWER for electricity generation.",
+        formulaBox: "Environmental impact comparison",
+        options: [
+          "Fossil fuels emit CO<sub>2</sub> (causing global warming) and SO<sub>2</sub> (causing acid rain); nuclear power emits NO greenhouse gases during operation, but produces hazardous radioactive waste that must be stored safely for thousands of years and carries a small risk of major accidents",
+          "Nuclear power emits huge amounts of carbon dioxide and sulfur dioxide",
+          "Fossil fuels produce radioactive waste, whereas nuclear fuel is renewable",
+          "Neither fossil fuels nor nuclear power has any environmental impact"
+        ],
+        correct: 0,
+        explanation: "AQA standard comparison: Fossil fuels drive climate change and acid rain; nuclear avoids CO<sub>2</sub> emissions but creates long-lived radioactive waste and high decommissioning costs."
+      },
+      {
+        id: "P1_Q68",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "How does a HYDRO-ELECTRIC power station generate electricity, and what is its main environmental disadvantage?",
+        formulaBox: "Gravitational potential energy of trapped water &rarr; Turbine &rarr; Generator",
+        options: [
+          "Water trapped behind a dam flows downhill through turbines connected to generators; building the dam floods large areas of valleys, destroying wildlife habitats and displacing communities",
+          "Hot rocks underground boil water into steam; it releases huge amounts of sulfur dioxide",
+          "Waves push air up a cliff pipe; it only works in deserts",
+          "Burning wood pellets heats a boiler; it produces radioactive waste"
+        ],
+        correct: 0,
+        explanation: "Hydro-electric power is renewable, reliable, and CO<sub>2</sub>-free during operation, but flooding valleys causes major habitat loss."
+      },
+      {
+        id: "P1_Q69",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "How does a GEOTHERMAL power station generate electricity, and why is it only suitable in certain locations (such as Iceland)?",
+        formulaBox: "Thermal energy from radioactive decay inside the Earth's crust",
+        options: [
+          "Cold water is pumped deep underground where hot volcanic rocks heat it into steam to drive turbines; it is only viable in volcanically active regions where hot rocks are close to the surface",
+          "Ocean tides spin underwater turbines; it requires a wide river estuary",
+          "Solar cells convert sunlight directly into electricity; it requires bright sunshine all year",
+          "Wind turns giant blades on hills; it requires high wind speeds"
+        ],
+        correct: 0,
+        explanation: "Geothermal energy uses thermal energy from hot rocks beneath the Earth's surface—reliable and low-emission, but geographically restricted."
+      },
+      {
+        id: "P1_Q70",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "Biofuels (made from plants or animal waste) are described as 'carbon neutral' in theory, yet growing biofuels on a massive scale can still cause serious environmental problems. What are TWO major concerns?",
+        formulaBox: "Evaluating large-scale biofuel production",
+        options: [
+          "1. Clearing rainforests/habitats to grow biofuel crops reduces biodiversity and releases stored CO<sub>2</sub>; 2. Using fertile farmland for fuel crops instead of food crops can increase food prices and food shortages",
+          "1. Biofuels produce radioactive waste; 2. Biofuels deplete underground uranium mines",
+          "1. Biofuels cannot be burned in engines; 2. Biofuels cause tidal barrages to collapse",
+          "1. Biofuels cool the Earth into an ice age; 2. Biofuels emit pure chlorine"
+        ],
+        correct: 0,
+        explanation: "Deforestation for biofuel plantations and competition with food production ('food vs. fuel') are key AQA evaluation points."
+      },
+      {
+        id: "P1_Q71",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "Scientists have identified that burning fossil fuels causes global climate change, yet societies have NOT immediately stopped using fossil fuels. Which combination of factors limits the rate at which countries switch to renewables?",
+        formulaBox: "Social, economic, and political constraints",
+        options: [
+          "High upfront capital cost of building renewable infrastructure, reliability/energy-storage challenges when wind/solar output drops, existing transport/heating reliance on fossil fuels, and political/economic disagreements",
+          "Because renewable energy creates more carbon dioxide than coal",
+          "Because wind turbines and solar panels have not been invented yet",
+          "Because fossil fuels are completely free to extract"
+        ],
+        correct: 0,
+        explanation: "AQA specification: Science has the ability to identify environmental issues arising from the use of energy resources, but not always the power to deal with the issues because of political, social, ethical, or economic considerations."
+      },
+      {
+        id: "P1_Q72",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "National & Global Energy Resources",
+        stem: "How has the UK's mix of energy resources for electricity generation changed over the past few decades?",
+        formulaBox: "Trends in UK electricity generation",
+        options: [
+          "Electricity from COAL has fallen dramatically (phased out) while electricity from RENEWABLES (especially offshore/onshore wind and solar) and natural gas has increased due to environmental targets and improved technology",
+          "Coal use has increased to 95% while wind and solar have been banned",
+          "Nuclear power has replaced all transport fuels",
+          "The UK now generates 100% of its electricity from geothermal power"
+        ],
+        correct: 0,
+        explanation: "AQA specification expects students to describe trends in energy resource use—notably the sharp decline in coal and rapid growth of wind and solar in the UK."
+      }
+    ];
+
+    /* ==========================================================================
+       APPLICATION STATE
+       ========================================================================== */
+    const configState = {
+      studentName: "",
+      studentEmail: "",
+      tier: "higher",         // 'foundation' | 'higher' | 'separate'
+      focus: "all",           // 'all' | 'practicals'
+      questionCount: 20
+    };
+
+    const quizState = {
+      questions: [],
+      currentIndex: 0,
+      answers: [],            // { question, selectedIndex, isCorrect }
+      answeredCurrent: false,
+      isRetryMode: false
+    };
+
+    const TIER_META = {
+      foundation: { name: "Foundation Tier", badge: "Foundation Tier Selected" },
+      higher: { name: "Higher Tier", badge: "Higher Tier Selected" },
+      separate: { name: "Separate Physics", badge: "Separate Physics Selected" }
+    };
+
+    const FOCUS_META = {
+      all: "All Energy Topics",
+      practicals: "Required Practicals & Calculations Only"
+    };
+
+    /* ==========================================================================
+       CONFIGURATION SCREEN INTERACTIONS
+       ========================================================================== */
+    function getFilteredPool() {
+      return QUESTION_POOL.filter(q => {
+        const tierMatch = q.tiers.includes(configState.tier);
+        const focusMatch = configState.focus === "all" ? true : q.isPractical === true;
+        return tierMatch && focusMatch;
+      });
+    }
+
+    function updateConfigUI() {
+      ["foundation", "higher", "separate"].forEach(t => {
+        const card = document.getElementById(`tier-card-${t}`);
+        const isSel = configState.tier === t;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+      });
+      document.getElementById("selected-tier-badge").textContent = TIER_META[configState.tier].badge;
+
+      ["all", "practicals"].forEach(f => {
+        const card = document.getElementById(`focus-card-${f}`);
+        const chk = document.getElementById(`focus-check-${f}`);
+        const isSel = configState.focus === f;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+        chk.classList.toggle("hidden", !isSel);
+      });
+
+      document.querySelectorAll(".count-btn").forEach(btn => {
+        const val = Number(btn.getAttribute("data-count"));
+        btn.classList.toggle("active", val === configState.questionCount);
+      });
+
+      const pool = getFilteredPool();
+      const focusSuffix = configState.focus === "practicals" ? " (Practicals & Calculations)" : "";
+      document.getElementById("available-q-label").textContent =
+        `${pool.length} unique questions available for ${TIER_META[configState.tier].name}${focusSuffix}`;
+
+      const capBanner = document.getElementById("cap-feedback-banner");
+      const effectiveCount = Math.min(configState.questionCount, pool.length);
+
+      if (configState.questionCount > pool.length) {
+        capBanner.textContent =
+          `Note: ${TIER_META[configState.tier].name}${focusSuffix} has ${pool.length} unique questions in the bank, so your quiz will run all ${pool.length} available unique questions.`;
+        capBanner.classList.remove("hidden");
+      } else {
+        capBanner.classList.add("hidden");
+      }
+
+      document.getElementById("btn-start-quiz").innerHTML =
+        `Start ${TIER_META[configState.tier].name} Quiz (${effectiveCount} Questions) &rarr;`;
+    }
+
+    function selectTier(tierKey) {
+      configState.tier = tierKey;
+      updateConfigUI();
+    }
+
+    function selectFocus(focusKey) {
+      configState.focus = focusKey;
+      updateConfigUI();
+    }
+
+    function selectCount(num) {
+      configState.questionCount = num;
+      updateConfigUI();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function launchConfiguredQuiz() {
+      const nameInput = document.getElementById("student-name");
+      const errorMsg = document.getElementById("name-error-msg");
+      const rawName = nameInput.value.trim();
+
+      if (!rawName) {
+        nameInput.classList.remove("input-error");
+        void nameInput.offsetWidth;
+        nameInput.classList.add("input-error");
+        errorMsg.classList.remove("hidden");
+        nameInput.focus();
+        return;
+      }
+
+      nameInput.classList.remove("input-error");
+      errorMsg.classList.add("hidden");
+
+      configState.studentName = rawName;
+      configState.studentEmail = document.getElementById("student-email").value.trim();
+
+      const pool = shuffleArray(getFilteredPool());
+      const selectedQuestions = pool.slice(0, Math.min(configState.questionCount, pool.length));
+
+      quizState.questions = selectedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = false;
+
+      switchScreen("view-quiz");
+      document.getElementById("banner-main-title").textContent = "Topic 1: Energy";
+      document.getElementById("banner-main-sub").textContent =
+        `${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      renderActiveQuestion();
+    }
+
+    function startRetryMissed() {
+      const missedQuestions = quizState.answers
+        .filter(item => !item.isCorrect)
+        .map(item => item.question);
+
+      if (missedQuestions.length === 0) return;
+
+      quizState.questions = missedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = true;
+
+      switchScreen("view-quiz");
+      renderActiveQuestion();
+    }
+
+    function returnToConfig() {
+      switchScreen("view-config");
+      document.getElementById("banner-main-title").textContent = "Configure Your Energy Quiz";
+      document.getElementById("banner-main-sub").textContent =
+        "Enter your name, choose your tier, select either all Topic 1 content or Required Practicals & Calculations only, and pick your question count.";
+      updateConfigUI();
+    }
+
+    function switchScreen(activeId) {
+      ["view-config", "view-quiz", "view-report"].forEach(id => {
+        document.getElementById(id).classList.toggle("hidden", id !== activeId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       ACTIVE QUIZ RENDERING & LOGIC
+       ========================================================================== */
+    function renderActiveQuestion() {
+      const total = quizState.questions.length;
+      const idx = quizState.currentIndex;
+      const qObj = quizState.questions[idx];
+      quizState.answeredCurrent = false;
+
+      document.getElementById("hud-student-pill").textContent = configState.studentName;
+      document.getElementById("hud-tier-pill").textContent = TIER_META[configState.tier].name;
+      document.getElementById("hud-focus-pill").textContent = FOCUS_META[configState.focus];
+      document.getElementById("hud-retry-pill").classList.toggle("hidden", !quizState.isRetryMode);
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+      document.getElementById("hud-counter").textContent = `Question ${idx + 1} of ${total}`;
+
+      const pct = Math.round((idx / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${pct}%`;
+
+      const kickerEl = document.getElementById("q-kicker-label");
+      kickerEl.innerHTML = `<span>Question ${idx + 1} of ${total} &bull; ${qObj.subtopic}</span>` +
+        (qObj.isPractical ? `<span class="rp-badge">PRACTICAL / CALCULATION</span>` : "");
+
+      document.getElementById("q-stem-text").innerHTML = qObj.stem;
+
+      const formulaBox = document.getElementById("q-formula-box");
+      if (qObj.formulaBox) {
+        formulaBox.innerHTML = qObj.formulaBox;
+        formulaBox.classList.remove("hidden");
+      } else {
+        formulaBox.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("quiz-options-list");
+      optionsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      qObj.options.forEach((optText, optIdx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt-btn";
+        btn.innerHTML = `
+          <span class="opt-letter">${letters[optIdx]}</span>
+          <span>${optText}</span>
+        `;
+        btn.addEventListener("click", () => submitOption(optIdx));
+        optionsContainer.appendChild(btn);
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      fbPanel.className = "feedback-panel hidden";
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.classList.add("hidden");
+      nextBtn.innerHTML = idx === total - 1 ? "View Diagnostic Report &rarr;" : "Next Question &rarr;";
+    }
+
+    function submitOption(selectedIdx) {
+      if (quizState.answeredCurrent) return;
+      quizState.answeredCurrent = true;
+
+      const qObj = quizState.questions[quizState.currentIndex];
+      const isCorrect = selectedIdx === qObj.correct;
+
+      quizState.answers.push({
+        question: qObj,
+        selectedIndex: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+
+      const total = quizState.questions.length;
+      const donePct = Math.round(((quizState.currentIndex + 1) / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${donePct}%`;
+
+      const optionBtns = document.querySelectorAll("#quiz-options-list .opt-btn");
+      optionBtns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.correct) {
+          btn.classList.add("correct");
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("dimmed");
+        }
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      const fbStatus = document.getElementById("fb-status-text");
+      const fbInsight = document.getElementById("fb-insight-text");
+
+      fbPanel.classList.remove("hidden", "fb-pass", "fb-fail");
+      if (isCorrect) {
+        fbPanel.classList.add("fb-pass");
+        fbStatus.textContent = "✓ Correct — Full Marks!";
+      } else {
+        fbPanel.classList.add("fb-fail");
+        const correctLetter = ["A", "B", "C", "D"][qObj.correct];
+        fbStatus.textContent = `✗ Incorrect — Correct Answer: Option ${correctLetter}`;
+      }
+      fbInsight.innerHTML = qObj.explanation;
+
+      document.getElementById("btn-next-question").classList.remove("hidden");
+    }
+
+    function advanceQuestion() {
+      if (quizState.currentIndex < quizState.questions.length - 1) {
+        quizState.currentIndex++;
+        renderActiveQuestion();
+      } else {
+        showDiagnosticReport();
+      }
+    }
+
+    /* ==========================================================================
+       DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    function showDiagnosticReport() {
+      switchScreen("view-report");
+      document.getElementById("banner-main-title").textContent = "Topic 1 Diagnostic Performance Report";
+      document.getElementById("banner-main-sub").textContent =
+        `Completed by ${configState.studentName}${configState.studentEmail ? ` (${configState.studentEmail})` : ""} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      const total = quizState.answers.length;
+      const correct = quizState.answers.filter(a => a.isCorrect).length;
+      const missed = total - correct;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById("rep-student-header").textContent =
+        `${configState.studentName} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}${quizState.isRetryMode ? " (Retry Round)" : ""}`;
+      document.getElementById("rep-pct-val").textContent = `${pct}%`;
+      document.getElementById("rep-frac-val").textContent = `(${correct} / ${total})`;
+      document.getElementById("rep-grade-pill").textContent = estimateAqaGrade(pct, configState.tier);
+
+      const msgEl = document.getElementById("rep-msg-text");
+      if (pct === 100) {
+        msgEl.textContent = `Outstanding work, ${configState.studentName}! You scored 100% across every question. Your AQA Topic 1 Energy knowledge and calculation skills are exam-ready.`;
+      } else if (pct >= 80) {
+        msgEl.textContent = `Strong performance, ${configState.studentName}! You have a solid command of Energy. Click 'Retry Missed Questions' below to master the final ${missed} question${missed === 1 ? "" : "s"}.`;
+      } else if (pct >= 50) {
+        msgEl.textContent = `Good progress, ${configState.studentName}! Review the amber and red sub-topics below, study the AQA Examiner Insights, and retry your missed questions to push into the top grade boundaries.`;
+      } else {
+        msgEl.textContent = `Great active recall practice, ${configState.studentName}! Focus on the Priority Revision sub-topics in red below, read the tailored AQA revision guidance, and retry your missed questions.`;
+      }
+
+      const retryBtn = document.getElementById("btn-retry-missed");
+      if (missed > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.textContent = `Retry Missed Questions (${missed})`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+
+      const topicMap = {};
+      quizState.answers.forEach(entry => {
+        const t = entry.question.subtopic;
+        if (!topicMap[t]) topicMap[t] = { correct: 0, total: 0 };
+        topicMap[t].total++;
+        if (entry.isCorrect) topicMap[t].correct++;
+      });
+
+      const masteryGrid = document.getElementById("rep-mastery-grid");
+      masteryGrid.innerHTML = "";
+
+      Object.keys(topicMap).forEach(topicName => {
+        const { correct: c, total: t } = topicMap[topicName];
+        const subPct = Math.round((c / t) * 100);
+
+        let chipClass = "sc-weak";
+        let fillClass = "fill-r";
+        let statusLabel = "Priority Revision";
+
+        if (subPct >= 80) {
+          chipClass = "sc-strong";
+          fillClass = "fill-g";
+          statusLabel = "Strong Area";
+        } else if (subPct >= 50) {
+          chipClass = "sc-dev";
+          fillClass = "fill-a";
+          statusLabel = "Developing";
+        }
+
+        const tip = subPct >= 80
+          ? "Secure understanding demonstrated—maintain with spaced active recall."
+          : (SUBTOPIC_GUIDANCE[topicName] || "Review examiner insights and retry missed questions in this sub-topic.");
+
+        const card = document.createElement("div");
+        card.className = "mastery-item";
+        card.innerHTML = `
+          <div class="mastery-item-top">
+            <span class="mastery-name">${topicName}</span>
+            <div class="mastery-right">
+              <span class="status-chip ${chipClass}">${statusLabel}</span>
+              <span style="font-size:0.84rem; font-weight:700; color:var(--slate-700);">${c}/${t} (${subPct}%)</span>
+            </div>
+          </div>
+          <div class="mastery-bar-track">
+            <div class="mastery-bar-fill ${fillClass}" style="width: ${subPct}%"></div>
+          </div>
+          <div class="mastery-tip">${tip}</div>
+        `;
+        masteryGrid.appendChild(card);
+      });
+
+      const reviewList = document.getElementById("rep-review-list");
+      reviewList.innerHTML = "";
+      reviewList.classList.add("hidden");
+      document.getElementById("btn-toggle-review").textContent = "Show Full Question-by-Question Review";
+
+      const letters = ["A", "B", "C", "D"];
+      quizState.answers.forEach((entry, idx) => {
+        const q = entry.question;
+        const userAns = `${letters[entry.selectedIndex]}. ${q.options[entry.selectedIndex]}`;
+        const rightAns = `${letters[q.correct]}. ${q.options[q.correct]}`;
+
+        const item = document.createElement("div");
+        item.className = `review-card ${entry.isCorrect ? "rc-ok" : "rc-bad"}`;
+        item.innerHTML = `
+          <div class="rc-kicker">Question ${idx + 1} &bull; ${q.subtopic} &bull; ${entry.isCorrect ? "Correct" : "Incorrect"}</div>
+          <div class="rc-q">${q.stem}</div>
+          <div class="rc-ans"><strong>Your Answer:</strong> <span style="color:${entry.isCorrect ? "var(--emerald-700)" : "var(--rose-600)"}; font-weight:600;">${userAns}</span></div>
+          ${!entry.isCorrect ? `<div class="rc-ans"><strong>Correct Answer:</strong> <span style="color:var(--emerald-700); font-weight:600;">${rightAns}</span></div>` : ""}
+          <div class="rc-exp"><strong>AQA Examiner Insight:</strong> ${q.explanation}</div>
+        `;
+        reviewList.appendChild(item);
+      });
+    }
+
+    function estimateAqaGrade(pct, tier) {
+      if (tier === "foundation") {
+        if (pct >= 80) return "Estimated AQA Indicator: Grade 4–5 (Maximum Foundation)";
+        if (pct >= 62) return "Estimated AQA Indicator: Grade 4 (Standard Pass)";
+        if (pct >= 45) return "Estimated AQA Indicator: Grade 3";
+        return "Estimated AQA Indicator: Grade 1–2 (Keep Practising)";
+      }
+      if (pct >= 80) return "Estimated AQA Indicator: Grade 8–9";
+      if (pct >= 65) return "Estimated AQA Indicator: Grade 6–7";
+      if (pct >= 48) return "Estimated AQA Indicator: Grade 4–5";
+      return "Estimated AQA Indicator: Grade 3 / Below (Target Revision)";
+    }
+
+    function toggleReviewSection() {
+      const list = document.getElementById("rep-review-list");
+      const btn = document.getElementById("btn-toggle-review");
+      const isHidden = list.classList.toggle("hidden");
+      btn.textContent = isHidden ? "Show Full Question-by-Question Review" : "Hide Full Question-by-Question Review";
+      if (!isHidden) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       KEYBOARD SHORTCUTS & INITIALISATION
+       ========================================================================== */
+    document.getElementById("student-name").addEventListener("input", function () {
+      if (this.value.trim()) {
+        this.classList.remove("input-error");
+        document.getElementById("name-error-msg").classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("view-quiz").classList.contains("hidden")) return;
+      const key = e.key.toUpperCase();
+      if (!quizState.answeredCurrent) {
+        if (key === "1" || key === "A") submitOption(0);
+        else if (key === "2" || key === "B") submitOption(1);
+        else if (key === "3" || key === "C") submitOption(2);
+        else if (key === "4" || key === "D") submitOption(3);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        advanceQuestion();
+      }
+    });
+
+    updateConfigUI();
+  </script>
+</body>
+</html>
